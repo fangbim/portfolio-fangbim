@@ -37,13 +37,13 @@ app.post('/', (req, res) => {
         from: email,
         to: myEmail,
         subject:'[FROM_PORTFOLIO]' + yourSubject,
-        text: msg  + 
-            + 'from: ' + email + ', Name:' + yourName
+        text: (msg) + ' \n\nfrom: ' + (email) + ', Name: ' + (yourName)
     };
 
     transporter.sendMail(mailOptions, (err, info) => {
         if (err) throw err;
         console.log('Email sent: ' + info.response);
+        console.log(email);
     });
 
     res.sendFile(__dirname + '/home.html')
