@@ -2,7 +2,7 @@
     "version": 2,
     "name": "portfolio-fangbim",
     "builds": [
-       { "src": "app.js", "use": "@vercel/node" }
+       { "src": "./app.js", "use": "@vercel/node" }
     ],
     "routes": [
        { "src": "/(.*)", "dest": "/" }
